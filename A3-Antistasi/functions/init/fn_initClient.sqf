@@ -407,7 +407,14 @@ if (A3A_hasACE) then
 boxX allowDamage false;
 boxX addAction ["Transfer Vehicle cargo to Ammobox", {[] spawn A3A_fnc_empty;}, 4];
 boxX addAction ["Move this asset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
-if (A3A_hasACE) then { [boxX, boxX] call ace_common_fnc_claim;};	//Disables ALL Ace Interactions
+if (A3A_hasACE) then { 
+	[boxX, boxX] call ace_common_fnc_claim;
+
+	// Add dog tags selling
+	if (dogTagSale == true) then {
+		boxX addAction ["Sell Dog Tags", {[player] call A3A_fnc_sellDogTags;}, 4];
+	};
+};	//Disables ALL Ace Interactions
 flagX allowDamage false;
 flagX addAction ["Unit Recruitment", {if ([player,300] call A3A_fnc_enemyNearCheck) then {["Recruit Unit", "You cannot recruit units while there are enemies near you."] call A3A_fnc_customHint;} else { [] spawn A3A_fnc_unit_recruit; }},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)"];
 flagX addAction ["Move this asset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];

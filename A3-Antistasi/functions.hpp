@@ -717,4 +717,8 @@ class A3A
         class attachedObjects {};
         class dropObject {};
     };
+
+    class Custom {
+        class sellDogTags {};
+    };
 };

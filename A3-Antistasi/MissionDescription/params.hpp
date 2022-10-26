@@ -550,4 +550,25 @@ class Params
         texts[] = {"Load from save (Default: 3)","None","1","3","5","10","15"};
         default = 9999;
     };
+    class Spacer9
+    {
+        title = "";
+        values[] = {""};
+        texts[] = {""};
+        default = "";
+    };
+    class dogTagSale
+    {
+        title = "Enable DogTags selling";
+        values[] = {9999, false, true};
+        texts[] = {"Load from save (Default: False)", "False", "True"};
+        default = 9999;  
+    };
+    class dogTagPrice
+    {
+        title = "DogTags Price";
+        values[] = {9999, 1, 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+        texts[] = {"Load from save (Default: 20)", "1", "5", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100"};
+        default = 9999;  
+    };
 };

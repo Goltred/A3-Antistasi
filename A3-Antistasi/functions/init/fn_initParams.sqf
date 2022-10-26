@@ -89,6 +89,8 @@ A3A_paramTable = [
     ["crateHelmetNumMax", "crateHelmetNumMax", [], 0],
     ["crateDeviceTypeMax", "crateDeviceTypeMax", [], 2],
     ["crateDeviceNumMax", "crateDeviceNumMax", [], 3],
+    ["dogTagSale", "dogTagSale", [], false],
+    ["dogTagPrice", "dogTagPrice", [], 20],
 
     // Not visible parameters yet, but otherwise handled the same way
     ["distanceSPWN", "", ["oldsave"], 1000],
