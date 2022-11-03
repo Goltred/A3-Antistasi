@@ -59,7 +59,7 @@ if (_level == "MEDIC") exitWith {
 		case (A3A_hasACEMedical): {
 			[
 				["ACE_Tourniquet",1],
-				["ACE_SalineIV_500",1],
+				["ACE_SalineIV_500",2],
 				["ACE_Morphine",2],
 				["ACE_Epinephrine",2],
 				["ACE_Adenosine",2],
