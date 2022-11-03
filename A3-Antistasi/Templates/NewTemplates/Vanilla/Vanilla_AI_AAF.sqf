@@ -160,6 +160,12 @@ if (A3A_hasACE) then {
     _slItems append ["ACE_microDAGR", "ACE_DAGR"];
     _eeItems append ["ACE_Clacker", "ACE_DefusalKit"];
     _mmItems append ["ACE_RangeCard", "ACE_ATragMX", "ACE_Kestrel4500"];
+
+};
+
+if (A3A_hasACRE) then {
+    _slItems append ["ACRE_PRC152"];
+    _mmItems append ["ACRE_PRC152"];
 };
 
 _loadoutData setVariable ["items_squadLeader_extras", _slItems];
@@ -402,7 +408,6 @@ private _riflemanTemplate = {
     ["helmets"] call _fnc_setHelmet;
     ["vests"] call _fnc_setVest;
     ["uniforms"] call _fnc_setUniform;
-
 
     [selectRandom ["rifles", "carbines"]] call _fnc_setPrimary;
     ["primary", 6] call _fnc_addMagazines;
