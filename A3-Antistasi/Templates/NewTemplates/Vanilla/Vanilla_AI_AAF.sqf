@@ -159,8 +159,10 @@ private _mmItems = [];
 if (A3A_hasACE) then {
     _slItems append ["ACE_microDAGR", "ACE_DAGR"];
     _eeItems append ["ACE_Clacker", "ACE_DefusalKit"];
-    _mmItems append ["ACE_RangeCard", "ACE_ATragMX", "ACE_Kestrel4500"];
-
+    _mmItems append ["ACE_RangeCard", "ACE_ATragMX", "ACE_Kestrel4500"];        
+    _loadoutData setVariable ["items_food_basic", ["ACE_WaterBottle", "ACE_WaterBottle_Half", "ACE_Can_Spirit", "ACE_Can_Franta", "ACE_Can_RedGull", "ACE_Sunflower_Seeds", "ACE_Banana","ACE_WaterBottle_Empty"]];
+    _loadoutData setVariable ["items_food_military", ["ACE_Canteen", "ACE_Canteen_Half", "ACE_Canteen_Empty","ACE_WaterBottle", "ACE_WaterBottle_Half","ACE_WaterBottle_Empty","ACE_MRE_LambCurry", "ACE_MRE_BeefStew","ACE_MRE_CreamTomatoSoup","ACE_MRE_CreamChickenSoup","ACE_MRE_ChickenTikkaMasala","ACE_MRE_SteakVegetables","ACE_MRE_MeatballsPasta","ACE_MRE_ChickenHerbDumplings","ACE_Humanitarian_Ration"]];
+    _loadoutData setVariable ["items_acemedical_blood", ["ACE_PlasmaIV_250", "ACE_PlasmaIV_500", "ACE_PlasmaIV", "ACE_personalAidKit", "ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250", "ACE_salineIV", "ACE_salineIV_500", "ACE_salineIV_250"]];
 };
 
 if (A3A_hasACRE) then {
@@ -394,6 +396,10 @@ private _squadLeaderTemplate = {
     ["antiInfantryGrenades", 2] call _fnc_addItem;
     ["signalsmokeGrenades", 2] call _fnc_addItem;
     ["smokeGrenades", 2] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -420,6 +426,9 @@ private _riflemanTemplate = {
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["antiInfantryGrenades", 2] call _fnc_addItem;
     ["smokeGrenades", 2] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -444,6 +453,9 @@ private _medicTemplate = {
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["antiInfantryGrenades", 1] call _fnc_addItem;
     ["smokeGrenades", 2] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -470,6 +482,10 @@ private _grenadierTemplate = {
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["antiInfantryGrenades", 4] call _fnc_addItem;
     ["smokeGrenades", 2] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -499,6 +515,10 @@ private _explosivesExpertTemplate = {
     if (random 1 > 0.5) then {["heavyExplosives", 1] call _fnc_addItem;};
     if (random 1 > 0.5) then {["atMines", 1] call _fnc_addItem;};
     if (random 1 > 0.5) then {["apMines", 1] call _fnc_addItem;};
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["antiInfantryGrenades", 1] call _fnc_addItem;
     ["smokeGrenades", 1] call _fnc_addItem;
@@ -530,6 +550,10 @@ private _engineerTemplate = {
 
     ["antiInfantryGrenades", 1] call _fnc_addItem;
     ["smokeGrenades", 2] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -559,6 +583,10 @@ private _latTemplate = {
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["antiInfantryGrenades", 1] call _fnc_addItem;
     ["smokeGrenades", 1] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -588,6 +616,10 @@ private _atTemplate = {
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["antiInfantryGrenades", 1] call _fnc_addItem;
     ["smokeGrenades", 1] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -617,6 +649,10 @@ private _aaTemplate = {
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["antiInfantryGrenades", 1] call _fnc_addItem;
     ["smokeGrenades", 2] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -642,6 +678,10 @@ private _machineGunnerTemplate = {
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["antiInfantryGrenades", 1] call _fnc_addItem;
     ["smokeGrenades", 2] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -667,6 +707,10 @@ private _marksmanTemplate = {
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["antiInfantryGrenades", 1] call _fnc_addItem;
     ["smokeGrenades", 2] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -693,6 +737,10 @@ private _sniperTemplate = {
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["antiInfantryGrenades", 1] call _fnc_addItem;
     ["smokeGrenades", 2] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -718,6 +766,9 @@ private _policeTemplate = {
     ["items_police_extras"] call _fnc_addItemSet;
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["smokeGrenades", 1] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_basic", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
@@ -740,6 +791,10 @@ private _crewTemplate = {
     ["items_crew_extras"] call _fnc_addItemSet;
     ["items_miscEssentials"] call _fnc_addItemSet;
     ["smokeGrenades", 2] call _fnc_addItem;
+    if (A3A_hasACE) then {
+        if (random 1 > 0.5) then {["items_food_military", 1] call _fnc_addItem;};
+        if (random 1 > 0.5) then {["items_acemedical_blood", 1] call _fnc_addItem;};
+    };
 
     ["maps"] call _fnc_addMap;
     ["watches"] call _fnc_addWatch;
