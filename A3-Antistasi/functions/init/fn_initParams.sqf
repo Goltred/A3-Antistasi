@@ -95,7 +95,8 @@ A3A_paramTable = [
     ["distanceSPWN", "", ["oldsave"], 1000],
     ["civPerc", "", ["oldsave"], 5],
     ["maxUnits", "", ["oldsave"], 140],
-    ["minPlayersRequiredForPVP", "", [], 2]
+    ["minPlayersRequiredForPVP", "", [], 2],
+    ["startWIthAceMedicalUnlocked", "startWIthAceMedicalUnlocked", [], true]
 
     // beware of the comma
 ];
