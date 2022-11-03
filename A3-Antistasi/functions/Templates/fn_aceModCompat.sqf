@@ -64,7 +64,7 @@ initialRebelEquipment append aceItems;
 
 
 //ACE medical starting items
-if (A3A_hasACEMedical) then {
+if (A3A_hasACEMedical && startWithAceMedicalUnlocked) then {
 	initialRebelEquipment append aceMedItems;
 };
 

@@ -112,8 +112,8 @@ class Params
     class unlockItem
     {
         title = "Number of the same item required to unlock";
-        values[] = {9999,15,25,40,1e6};
-        texts[] = {"Load from save (Default: 25)","15","25","40","1 000 000"};
+        values[] = {9999,15,25,40,100,1e6};
+        texts[] = {"Load from save (Default: 25)","15","25","40","100","1 000 000"};
         default = 9999;
     };
     class memberOnlyMagLimit
@@ -177,6 +177,13 @@ class Params
         title = "Should Explosives become unlocked?";
         values[] = {9999,1,0};
         texts[] = {"Load from save (Default: No)","Yes","No"};
+        default = 9999;
+    };
+    class startWithRadiosUnlocked
+    {
+        title = "[ACRE] Start with ACRE radios unlocked?";
+        values[] = {9999,1,0};
+        texts[] = {"Load from save (Default: Yes)","Yes","No"};
         default = 9999;
     };
     class startWithLongRangeRadio
@@ -548,6 +555,20 @@ class Params
         title = "Maximum Device Backpack Quantity in Crates";
         values[] = {9999,0,1,3,5,10,15};
         texts[] = {"Load from save (Default: 3)","None","1","3","5","10","15"};
+        default = 9999;
+    };
+    class Spacer9
+    {
+        title = "";
+        values[] = {""};
+        texts[] = {""};
+        default = "";
+    };
+    class startWithAceMedicalUnlocked
+    {
+        title = "Start with ACE medical items unlocked";
+        values[] = {9999,1,0};
+        texts[] = {"Load from save (Default: Yes)","Yes","No"};
         default = 9999;
     };
 };

@@ -57,6 +57,7 @@ A3A_paramTable = [
     ["memberSlots", "memberSlots", ["server"], 20],
 
     ["startWithLongRangeRadio", "startWithLongRangeRadio", [], true],
+    ["startWithRadiosUnlocked", "startWithRadiosUnlocked", [], true],
     ["helmetLossChance", "helmetLossChance", [], 33],
     ["minWeaps", "unlockItem", [], 25],
     ["memberOnlyMagLimit", "memberOnlyMagLimit", [], 40],				// dead param
